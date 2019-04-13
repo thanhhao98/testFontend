@@ -1,0 +1,13 @@
+version: "2"
+services:
+  frontend:
+    image: thanhhao98/test:1.0.0
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./public:/usr/src/project/public
+      - ./src:/usr/src/project/src
+      - ./babel.config.js:/usr/src/project/babel.config.js
+      - ./package.json:/usr/src/project/package.json
+      - ./start.sh:/usr/src/project/start.sh
+    entrypoint: /usr/src/project/start.sh
