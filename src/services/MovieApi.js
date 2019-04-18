@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export default {
-
   fetchMovieCollection (name) {
     return axios.get('&s=' + name)
       .then(response => {

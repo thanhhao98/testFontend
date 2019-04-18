@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import LatestMovie from '@/components/LatestMovie'
 import Movie from '@/components/Movie'
 import SearchMovie from '@/components/SearchMovie'
-
+import home from '@/components/home'
+import Login from '@/components/Login'
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -12,6 +13,16 @@ export default new VueRouter({
       path: '/',
       name: 'LatestMovie',
       component: LatestMovie
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: home
     },
     {
       path: '/movie/:id',

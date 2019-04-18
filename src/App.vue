@@ -1,41 +1,22 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <router-link
-        to='/'
-        tag='span'
-        style='cursor: pointer'>
-        Movie Man
-        </router-link>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-flex xs12 sm6 md3>
-        <v-text-field
-          label='Movie Name'
-          v-model='searchString'
-          >
-        </v-text-field>
-        </v-flex>
-      <v-btn
-        flat
-        :disabled="!dataAvailable"
-        @click="searchMovie"
-      >
-       <span class="mr-2">Search</span>
-      </v-btn>
-    </v-toolbar>
-
+    <Toolbar/>
     <v-content>
-    <router-view></router-view>
+      <router-view></router-view>
     </v-content>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
+import Toolbar from './components/Toolbar.vue'
+import Footer from './components/Footer.vue'
+console.log(Toolbar)
 export default {
   name: 'App',
   components: {
+    Toolbar,
+    Footer
   },
   data () {
     return {

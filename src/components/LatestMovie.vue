@@ -1,5 +1,4 @@
 <template>
-
   <v-container v-if="loading">
     <div class="text-xs-center">
       <v-progress-circular
